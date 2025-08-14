@@ -17,7 +17,7 @@
                      if (computerMove === 'rock'){
                      result = 'You lose';
                      } else if (computerMove === 'paper'){
-                            result = 'You Win'
+                            result = 'You win'
                      } else if (computerMove === 'Scissors'){
                             result = 'Tie'
                      }
@@ -56,8 +56,8 @@
                  document.querySelector('.js-result').innerHTML = result;
 
                  document.querySelector('.js-moves').innerHTML = 
-                 `You <img class="move-icon" src="images/${playerMove}-emoji.jpg" alt="rock">
-              <img class="move-icon" src="images/${computerMove}-emoji.jpg" alt="scissors">
+                 `You <img class="move-icon" src="images/${playerMove}-emoji.png" alt="rock">
+              <img class="move-icon" src="images/${computerMove}-emoji.png" alt="scissors">
               Computer`
 
                             }
