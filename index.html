@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissor</title>
+    <script defer src="script.js"></script>
 </head>
 <body>
     <style>
@@ -11,10 +12,15 @@
               background-color: rgba(15, 230, 80, 0.703);
               color: #262424;
               font-family: Arial, Helvetica, sans-serif;
+              text-align: center;
+              align-items: center;
        }
        .title{
               font-size: 30px;
               font-weight: bold;
+       }
+       .move-icon{
+        height: 70px;
        }
               .move-button{
               background-color: transparent;
@@ -48,9 +54,14 @@
 
     </style>
     <h3 class="title">Rock Paper Scissors Game</h3>
-    <button class="move-button" id="rock"></button>
-    <button class="move-button" id="paper"></button>
-    <button class="move-button" id="Scissors"></button>
+    <button class="move-button" id="rock" onclick="playGame('rock')"> 
+        <img class="move-icon" src="images/rock-emoji.png" alt="rock"></button>
+
+    <button class="move-button" id="paper" onclick="playGame('paper')">
+         <img src="images/paper-emoji.png" alt="paper" class="move-icon"></button>
+
+    <button class="move-button" id="Scissors" onclick="playGame('Scissors')"> 
+        <img src="images/scissors-emoji.png" alt="scissor" class="move-icon"></button>
 
      <p class="js-result result">
 
@@ -62,8 +73,12 @@
 
        </P>
 
-       <button id="rs">
-
-       </button>
+       <button id="rs"  onclick="
+              score.wins = 0;
+              score.losses = 0;
+              score.ties = 0;
+              localStorage.removeItem('score');
+              updateScoreElement();
+       ">Reset Score </button>
 </body>
 </html>
